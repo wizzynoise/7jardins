@@ -9,85 +9,85 @@ import { CheckCircle, PenTool, Shovel, Leaf, Droplet, Trees, BookOpen, Sunset } 
 const services = [
   {
     id: "design",
-    title: "Garden Design",
+    title: "Design de Jardins",
     icon: <PenTool size={36} className="text-garden-accent" />,
-    description: "Our expert designers create custom garden plans tailored to your specific needs, preferences, and site conditions.",
+    description: "Os nossos designers experientes criam planos de jardim personalizados adaptados às suas necessidades específicas, preferências e condições do local.",
     features: [
-      "Initial consultation and site assessment",
-      "Conceptual design and visualization",
-      "Detailed planting and hardscape plans",
-      "Material selection assistance",
-      "Irrigation and lighting planning"
+      "Consulta inicial e avaliação do local",
+      "Design conceptual e visualização",
+      "Planos detalhados de plantação e paisagismo",
+      "Assistência na seleção de materiais",
+      "Planeamento de irrigação e iluminação"
     ],
     image: "https://images.unsplash.com/photo-1528092744838-b91de0a10615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
     id: "landscaping",
-    title: "Landscaping",
+    title: "Paisagismo",
     icon: <Shovel size={36} className="text-garden-accent" />,
-    description: "We transform your outdoor space with professional installation of both softscape and hardscape elements.",
+    description: "Transformamos o seu espaço exterior com instalação profissional de elementos de vegetação e estruturas.",
     features: [
-      "Site preparation and grading",
-      "Hardscape installation (patios, walkways, retaining walls)",
-      "Planting of trees, shrubs, and flowers",
-      "Mulching and soil amendments",
-      "Water feature installation"
+      "Preparação e nivelamento do terreno",
+      "Instalação de estruturas (pátios, caminhos, muros de contenção)",
+      "Plantação de árvores, arbustos e flores",
+      "Cobertura vegetal e melhoramento do solo",
+      "Instalação de elementos aquáticos"
     ],
     image: "https://images.unsplash.com/photo-1626863905122-b51b8413e384?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
     id: "maintenance",
-    title: "Garden Maintenance",
+    title: "Manutenção de Jardins",
     icon: <Leaf size={36} className="text-garden-accent" />,
-    description: "Our ongoing maintenance services keep your garden looking beautiful and healthy throughout the seasons.",
+    description: "Os nossos serviços de manutenção contínua mantêm o seu jardim bonito e saudável ao longo das estações.",
     features: [
-      "Regular lawn care and mowing",
-      "Pruning and plant health care",
-      "Seasonal clean-up and mulching",
-      "Fertilization and weed control",
-      "Pest and disease management"
+      "Cuidados regulares com o relvado e corte",
+      "Poda e cuidados com a saúde das plantas",
+      "Limpeza sazonal e cobertura vegetal",
+      "Fertilização e controlo de ervas daninhas",
+      "Gestão de pragas e doenças"
     ],
     image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
     id: "irrigation",
-    title: "Irrigation Systems",
+    title: "Sistemas de Irrigação",
     icon: <Droplet size={36} className="text-garden-accent" />,
-    description: "We design and install efficient irrigation systems that conserve water while keeping your garden healthy.",
+    description: "Projetamos e instalamos sistemas de irrigação eficientes que conservam água enquanto mantêm o seu jardim saudável.",
     features: [
-      "Custom irrigation system design",
-      "Water-efficient sprinkler installation",
-      "Drip irrigation for targeted watering",
-      "Smart controller setup and programming",
-      "System maintenance and repairs"
+      "Design personalizado do sistema de irrigação",
+      "Instalação de aspersores eficientes em termos de consumo de água",
+      "Irrigação por gotejamento para rega direcionada",
+      "Configuração e programação de controladores inteligentes",
+      "Manutenção e reparação do sistema"
     ],
     image: "https://images.unsplash.com/photo-1576627096430-88c7969ada33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
     id: "consulting",
-    title: "Consulting",
+    title: "Consultoria",
     icon: <BookOpen size={36} className="text-garden-accent" />,
-    description: "Our experts provide professional advice to help you make informed decisions about your garden.",
+    description: "Os nossos especialistas fornecem aconselhamento profissional para ajudá-lo a tomar decisões informadas sobre o seu jardim.",
     features: [
-      "Plant selection guidance",
-      "Problem diagnosis and solutions",
-      "Soil testing and amendment recommendations",
-      "Sustainable gardening practices",
-      "DIY project planning assistance"
+      "Orientação na seleção de plantas",
+      "Diagnóstico e soluções de problemas",
+      "Testes ao solo e recomendações de melhoramento",
+      "Práticas de jardinagem sustentável",
+      "Assistência no planeamento de projetos DIY"
     ],
     image: "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
     id: "seasonal",
-    title: "Seasonal Services",
+    title: "Serviços Sazonais",
     icon: <Sunset size={36} className="text-garden-accent" />,
-    description: "We provide specialized care for your garden as the seasons change, ensuring year-round beauty.",
+    description: "Fornecemos cuidados especializados para o seu jardim com a mudança das estações, garantindo beleza durante todo o ano.",
     features: [
-      "Spring garden preparation and planting",
-      "Summer maintenance and pest control",
-      "Fall clean-up and winterization",
-      "Winter protection and planning",
-      "Holiday lighting and decoration"
+      "Preparação e plantação do jardim na primavera",
+      "Manutenção e controlo de pragas no verão",
+      "Limpeza e preparação para o inverno no outono",
+      "Proteção e planeamento no inverno",
+      "Iluminação e decoração para ocasiões festivas"
     ],
     image: "https://images.unsplash.com/photo-1603201236596-eb1a63eb0ede?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2033&q=80"
   }
@@ -102,10 +102,10 @@ const Services = () => {
         {/* Hero Section */}
         <section className="relative py-24 bg-garden-dark">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Os Nossos Serviços</h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              From design to maintenance, we provide comprehensive garden services 
-              tailored to meet your specific needs.
+              Do design à manutenção, fornecemos serviços completos de jardinagem 
+              adaptados às suas necessidades específicas.
             </p>
           </div>
         </section>
@@ -166,7 +166,7 @@ const Services = () => {
                     </div>
                     
                     <Button asChild className="bg-garden-accent hover:bg-garden-accent/90">
-                      <Link to="/contact">Inquire About This Service</Link>
+                      <Link to="/contact">Solicitar Informação sobre Este Serviço</Link>
                     </Button>
                   </div>
                 </div>
@@ -179,13 +179,13 @@ const Services = () => {
         <section className="py-16 bg-earth-light">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-garden-accent font-medium mb-2">Our Process</h2>
+              <h2 className="text-garden-accent font-medium mb-2">O Nosso Processo</h2>
               <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-                How We Work
+                Como Trabalhamos
               </h3>
               <p className="max-w-2xl mx-auto text-muted-foreground">
-                We follow a structured approach to ensure your garden project is completed
-                efficiently and to the highest standards.
+                Seguimos uma abordagem estruturada para garantir que o seu projeto de jardim 
+                é concluído com eficiência e segundo os mais elevados padrões.
               </p>
             </div>
             
@@ -197,14 +197,14 @@ const Services = () => {
                 {/* Step 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
                   <div className="md:text-right md:pr-12">
-                    <h4 className="text-xl font-serif font-bold mb-2">1. Initial Consultation</h4>
-                    <p>We meet with you to discuss your vision, requirements, and budget for your garden project.</p>
+                    <h4 className="text-xl font-serif font-bold mb-2">1. Consulta Inicial</h4>
+                    <p>Reunimos consigo para discutir a sua visão, requisitos e orçamento para o projeto do seu jardim.</p>
                   </div>
                   <div className="hidden md:block absolute left-1/2 top-4 w-8 h-8 bg-garden-accent rounded-full -translate-x-1/2"></div>
                   <div className="md:pl-12">
                     <img 
                       src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
-                      alt="Initial consultation" 
+                      alt="Consulta inicial" 
                       className="rounded-lg shadow-md w-full h-48 object-cover"
                     />
                   </div>
@@ -213,14 +213,14 @@ const Services = () => {
                 {/* Step 2 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
                   <div className="md:order-2 md:pl-12">
-                    <h4 className="text-xl font-serif font-bold mb-2">2. Site Assessment & Design</h4>
-                    <p>Our team evaluates your space and creates a custom design plan that aligns with your vision.</p>
+                    <h4 className="text-xl font-serif font-bold mb-2">2. Avaliação do Local e Design</h4>
+                    <p>A nossa equipa avalia o seu espaço e cria um plano de design personalizado que se alinha com a sua visão.</p>
                   </div>
                   <div className="hidden md:block absolute left-1/2 top-4 w-8 h-8 bg-garden-accent rounded-full -translate-x-1/2"></div>
                   <div className="md:order-1 md:text-right md:pr-12">
                     <img 
                       src="https://images.unsplash.com/photo-1553530979-fbb9e4aee36f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                      alt="Site assessment and design" 
+                      alt="Avaliação do local e design" 
                       className="rounded-lg shadow-md w-full h-48 object-cover"
                     />
                   </div>
@@ -229,14 +229,14 @@ const Services = () => {
                 {/* Step 3 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
                   <div className="md:text-right md:pr-12">
-                    <h4 className="text-xl font-serif font-bold mb-2">3. Project Planning</h4>
-                    <p>We develop a detailed project plan, including timeline, materials, and cost estimates for your approval.</p>
+                    <h4 className="text-xl font-serif font-bold mb-2">3. Planeamento do Projeto</h4>
+                    <p>Desenvolvemos um plano de projeto detalhado, incluindo cronograma, materiais e estimativas de custo para a sua aprovação.</p>
                   </div>
                   <div className="hidden md:block absolute left-1/2 top-4 w-8 h-8 bg-garden-accent rounded-full -translate-x-1/2"></div>
                   <div className="md:pl-12">
                     <img 
                       src="https://images.unsplash.com/photo-1581553673739-c4906b5d0de8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                      alt="Project planning" 
+                      alt="Planeamento do projeto" 
                       className="rounded-lg shadow-md w-full h-48 object-cover"
                     />
                   </div>
@@ -245,14 +245,14 @@ const Services = () => {
                 {/* Step 4 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
                   <div className="md:order-2 md:pl-12">
-                    <h4 className="text-xl font-serif font-bold mb-2">4. Implementation</h4>
-                    <p>Our skilled team brings your garden to life, handling all aspects of construction and planting.</p>
+                    <h4 className="text-xl font-serif font-bold mb-2">4. Implementação</h4>
+                    <p>A nossa equipa qualificada dá vida ao seu jardim, lidando com todos os aspectos da construção e plantação.</p>
                   </div>
                   <div className="hidden md:block absolute left-1/2 top-4 w-8 h-8 bg-garden-accent rounded-full -translate-x-1/2"></div>
                   <div className="md:order-1 md:text-right md:pr-12">
                     <img 
                       src="https://images.unsplash.com/photo-1599708153386-62bf3adce970?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                      alt="Implementation" 
+                      alt="Implementação" 
                       className="rounded-lg shadow-md w-full h-48 object-cover"
                     />
                   </div>
@@ -261,14 +261,14 @@ const Services = () => {
                 {/* Step 5 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
                   <div className="md:text-right md:pr-12">
-                    <h4 className="text-xl font-serif font-bold mb-2">5. Completion & Care</h4>
-                    <p>We finalize your project and provide guidance on caring for your new garden to ensure it thrives for years to come.</p>
+                    <h4 className="text-xl font-serif font-bold mb-2">5. Conclusão e Cuidados</h4>
+                    <p>Finalizamos o seu projeto e fornecemos orientação sobre os cuidados com o seu novo jardim para garantir que prospere durante anos.</p>
                   </div>
                   <div className="hidden md:block absolute left-1/2 top-4 w-8 h-8 bg-garden-accent rounded-full -translate-x-1/2"></div>
                   <div className="md:pl-12">
                     <img 
                       src="https://images.unsplash.com/photo-1555955208-94f6fafea771?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                      alt="Completion and care" 
+                      alt="Conclusão e cuidados" 
                       className="rounded-lg shadow-md w-full h-48 object-cover"
                     />
                   </div>
@@ -282,13 +282,13 @@ const Services = () => {
         <section className="py-16 bg-garden-accent">
           <div className="container mx-auto px-4 text-center">
             <h3 className="text-3xl font-serif font-bold mb-4 text-white">
-              Ready to Transform Your Outdoor Space?
+              Pronto para Transformar o Seu Espaço Exterior?
             </h3>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
-              Contact us today for a free consultation and take the first step towards your dream garden.
+              Contacte-nos hoje para uma consulta gratuita e dê o primeiro passo em direção ao jardim dos seus sonhos.
             </p>
             <Button asChild size="lg" className="bg-white text-garden-accent hover:bg-white/90">
-              <Link to="/contact">Get in Touch</Link>
+              <Link to="/contact">Entre em Contacto</Link>
             </Button>
           </div>
         </section>

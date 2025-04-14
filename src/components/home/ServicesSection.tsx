@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PenTool, Shovel, Leaf, Droplet, Trees } from 'lucide-react';
@@ -7,28 +8,28 @@ import { Card, CardContent } from "@/components/ui/card";
 const services = [
   {
     icon: <PenTool size={40} className="text-garden-accent" />,
-    title: "Garden Design",
-    description: "Custom garden designs tailored to your space, style, and needs."
+    title: "Design de Jardins",
+    description: "Designs de jardim personalizados adaptados ao seu espaço, estilo e necessidades."
   },
   {
     icon: <Shovel size={40} className="text-garden-accent" />,
-    title: "Landscaping",
-    description: "Full-scale landscaping services from hardscaping to planting."
+    title: "Paisagismo",
+    description: "Serviços de paisagismo completo desde estruturas até à plantação."
   },
   {
     icon: <Leaf size={40} className="text-garden-accent" />,
-    title: "Garden Maintenance",
-    description: "Regular maintenance to keep your garden healthy and beautiful year-round."
+    title: "Manutenção de Jardins",
+    description: "Manutenção regular para manter o seu jardim saudável e bonito durante todo o ano."
   },
   {
     icon: <Droplet size={40} className="text-garden-accent" />,
-    title: "Irrigation Systems",
-    description: "Efficient watering solutions to maintain your garden while conserving water."
+    title: "Sistemas de Irrigação",
+    description: "Soluções eficientes de rega para manter o seu jardim enquanto conserva água."
   },
   {
     icon: <Trees size={40} className="text-garden-accent" />,
-    title: "Consulting",
-    description: "Expert advice for DIY gardeners and professionals alike."
+    title: "Consultoria",
+    description: "Aconselhamento especializado para jardineiros DIY e profissionais."
   }
 ];
 
@@ -37,13 +38,13 @@ const ServicesSection = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-garden-accent font-medium mb-2">Our Services</h2>
+          <h2 className="text-garden-accent font-medium mb-2">Os Nossos Serviços</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            What We Offer
+            O Que Oferecemos
           </h3>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            From initial concept to ongoing maintenance, we provide comprehensive gardening services
-            to meet all your outdoor space needs.
+            Desde o conceito inicial até à manutenção contínua, fornecemos serviços completos de jardinagem
+            para satisfazer todas as necessidades do seu espaço exterior.
           </p>
         </div>
         
@@ -63,7 +64,7 @@ const ServicesSection = () => {
         
         <div className="text-center">
           <Button asChild className="bg-garden-accent hover:bg-garden-accent/90">
-            <Link to="/services">View All Services</Link>
+            <Link to="/services">Ver Todos os Serviços</Link>
           </Button>
         </div>
       </div>

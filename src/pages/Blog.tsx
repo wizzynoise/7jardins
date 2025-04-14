@@ -11,87 +11,87 @@ import { Input } from '@/components/ui/input';
 const blogPosts = [
   {
     id: 1,
-    title: "10 Summer Garden Maintenance Tips",
-    excerpt: "Keep your garden thriving during the hot summer months with these essential maintenance tips.",
-    content: "Summer is a critical time for garden care. With these ten tips, you can ensure your garden not only survives the heat but thrives throughout the season...",
+    title: "10 Dicas de Manutenção de Jardins para o Verão",
+    excerpt: "Mantenha o seu jardim próspero durante os meses quentes de verão com estas dicas essenciais de manutenção.",
+    content: "O verão é um período crítico para os cuidados com o jardim. Com estas dez dicas, pode garantir que o seu jardim não só sobrevive ao calor, mas também prospera durante toda a estação...",
     image: "https://images.unsplash.com/photo-1588329722091-6194cf41b424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
-    date: "June 15, 2023",
-    author: "Sophie Martinez",
-    category: "Maintenance",
-    tags: ["summer", "maintenance", "watering", "pest control"]
+    date: "15 de Junho, 2023",
+    author: "Sofia Martinez",
+    category: "Manutenção",
+    tags: ["verão", "manutenção", "rega", "controlo de pragas"]
   },
   {
     id: 2,
-    title: "Sustainable Gardening Practices for Every Home",
-    excerpt: "Learn how to create an eco-friendly garden that benefits both your family and the environment.",
-    content: "Sustainable gardening isn't just good for the planet—it's also better for your plants, your wallet, and your health. Here's how to make your garden more eco-friendly...",
+    title: "Práticas de Jardinagem Sustentável para Cada Casa",
+    excerpt: "Aprenda a criar um jardim ecológico que beneficia tanto a sua família como o ambiente.",
+    content: "A jardinagem sustentável não é apenas boa para o planeta — é também melhor para as suas plantas, para a sua carteira e para a sua saúde. Eis como tornar o seu jardim mais ecológico...",
     image: "https://images.unsplash.com/photo-1617934286773-d3262960503c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    date: "May 22, 2023",
+    date: "22 de Maio, 2023",
     author: "David Chen",
-    category: "Sustainability",
-    tags: ["eco-friendly", "composting", "water conservation", "native plants"]
+    category: "Sustentabilidade",
+    tags: ["ecológico", "compostagem", "conservação de água", "plantas nativas"]
   },
   {
     id: 3,
-    title: "Creating a Garden that Attracts Pollinators",
-    excerpt: "Discover which plants and features will help support vital pollinators in your garden.",
-    content: "Pollinators like bees, butterflies, and hummingbirds are essential for healthy gardens and ecosystems. Here's how to make your garden a haven for these important creatures...",
+    title: "Criar um Jardim que Atrai Polinizadores",
+    excerpt: "Descubra quais as plantas e características que ajudarão a apoiar polinizadores vitais no seu jardim.",
+    content: "Polinizadores como abelhas, borboletas e beija-flores são essenciais para jardins e ecossistemas saudáveis. Eis como tornar o seu jardim num refúgio para estas criaturas importantes...",
     image: "https://images.unsplash.com/photo-1534710961216-75c88202f43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-    date: "April 10, 2023",
+    date: "10 de Abril, 2023",
     author: "Amara Johnson",
     category: "Design",
-    tags: ["pollinators", "bees", "butterflies", "native flowers"]
+    tags: ["polinizadores", "abelhas", "borboletas", "flores nativas"]
   },
   {
     id: 4,
-    title: "Japanese Garden Design Principles for Small Spaces",
-    excerpt: "Adapt traditional Japanese garden elements for your compact urban garden.",
-    content: "You don't need acres of land to create a serene Japanese-inspired garden. Learn how to incorporate key elements like water, stone, and carefully selected plants...",
+    title: "Princípios de Design de Jardins Japoneses para Espaços Pequenos",
+    excerpt: "Adapte elementos tradicionais de jardins japoneses para o seu compacto jardim urbano.",
+    content: "Não precisa de hectares de terreno para criar um sereno jardim de inspiração japonesa. Aprenda a incorporar elementos-chave como água, pedra e plantas cuidadosamente selecionadas...",
     image: "https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    date: "March 5, 2023",
-    author: "Sophie Martinez",
+    date: "5 de Março, 2023",
+    author: "Sofia Martinez",
     category: "Design",
-    tags: ["Japanese", "small gardens", "zen", "design principles"]
+    tags: ["japonês", "jardins pequenos", "zen", "princípios de design"]
   },
   {
     id: 5,
-    title: "Edible Landscaping: Beautiful and Delicious Gardens",
-    excerpt: "Combine ornamental and edible plants to create a garden that's both beautiful and productive.",
-    content: "Edible landscaping is the perfect blend of form and function. Learn how to integrate fruits, vegetables, and herbs into your ornamental garden design...",
+    title: "Paisagismo Comestível: Jardins Bonitos e Deliciosos",
+    excerpt: "Combine plantas ornamentais e comestíveis para criar um jardim que é tanto bonito como produtivo.",
+    content: "O paisagismo comestível é a mistura perfeita de forma e função. Aprenda a integrar frutas, legumes e ervas no design do seu jardim ornamental...",
     image: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80",
-    date: "February 18, 2023",
+    date: "18 de Fevereiro, 2023",
     author: "Miguel Rodriguez",
-    category: "Edible Gardens",
-    tags: ["vegetables", "herbs", "edible flowers", "food gardening"]
+    category: "Jardins Comestíveis",
+    tags: ["legumes", "ervas", "flores comestíveis", "jardinagem alimentar"]
   },
   {
     id: 6,
-    title: "Garden Therapy: How Gardening Improves Mental Health",
-    excerpt: "Explore the psychological benefits of gardening and how to create a therapeutic garden space.",
-    content: "Gardening is more than a hobby—it's a form of therapy. Discover the science behind gardening's positive effects on mental health and how to maximize these benefits...",
+    title: "Terapia de Jardim: Como a Jardinagem Melhora a Saúde Mental",
+    excerpt: "Explore os benefícios psicológicos da jardinagem e como criar um espaço de jardim terapêutico.",
+    content: "A jardinagem é mais do que um hobby — é uma forma de terapia. Descubra a ciência por detrás dos efeitos positivos da jardinagem na saúde mental e como maximizar estes benefícios...",
     image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    date: "January 25, 2023",
+    date: "25 de Janeiro, 2023",
     author: "Amara Johnson",
-    category: "Wellness",
-    tags: ["mental health", "therapy", "stress reduction", "mindfulness"]
+    category: "Bem-estar",
+    tags: ["saúde mental", "terapia", "redução do stress", "mindfulness"]
   }
 ];
 
 const categories = [
-  "All",
+  "Todos",
   "Design",
-  "Maintenance",
-  "Sustainability",
-  "Edible Gardens",
-  "Wellness"
+  "Manutenção",
+  "Sustentabilidade",
+  "Jardins Comestíveis",
+  "Bem-estar"
 ];
 
 const Blog = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [selectedCategory, setSelectedCategory] = React.useState("Todos");
   const [searchQuery, setSearchQuery] = React.useState("");
   
   const filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === "Todos" || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -106,9 +106,9 @@ const Blog = () => {
         {/* Hero Section */}
         <section className="relative py-24 bg-garden-dark">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Garden Blog</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Blog de Jardim</h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Tips, insights, and inspiration for creating and maintaining your perfect garden.
+              Dicas, insights e inspiração para criar e manter o seu jardim perfeito.
             </p>
           </div>
         </section>
@@ -126,7 +126,7 @@ const Blog = () => {
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={18} />
                       <Input
                         className="pl-10 pr-4 w-full md:w-64"
-                        placeholder="Search articles..."
+                        placeholder="Pesquisar artigos..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                       />
@@ -171,9 +171,9 @@ const Blog = () => {
                             <h2 className="text-2xl font-serif font-bold mb-2">{post.title}</h2>
                             <p className="text-muted-foreground mb-4">{post.excerpt}</p>
                             <div className="flex justify-between items-center">
-                              <span className="text-sm">By {post.author}</span>
+                              <span className="text-sm">Por {post.author}</span>
                               <Button asChild variant="link" className="text-garden-accent p-0">
-                                <Link to={`/blog/${post.id}`}>Read More</Link>
+                                <Link to={`/blog/${post.id}`}>Ler Mais</Link>
                               </Button>
                             </div>
                           </CardContent>
@@ -183,16 +183,16 @@ const Blog = () => {
                   </div>
                 ) : (
                   <div className="text-center py-12">
-                    <h3 className="text-xl font-medium mb-2">No articles found</h3>
-                    <p className="text-muted-foreground">Try adjusting your search or filter to find what you're looking for.</p>
+                    <h3 className="text-xl font-medium mb-2">Nenhum artigo encontrado</h3>
+                    <p className="text-muted-foreground">Tente ajustar a sua pesquisa ou filtro para encontrar o que procura.</p>
                     <Button
                       className="mt-4 bg-garden-accent hover:bg-garden-accent/90"
                       onClick={() => {
-                        setSelectedCategory("All");
+                        setSelectedCategory("Todos");
                         setSearchQuery("");
                       }}
                     >
-                      Reset Filters
+                      Redefinir Filtros
                     </Button>
                   </div>
                 )}
@@ -203,12 +203,12 @@ const Blog = () => {
                 {/* About */}
                 <Card className="mb-8 border-none shadow-md">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-serif font-bold mb-4">About Our Blog</h3>
+                    <h3 className="text-xl font-serif font-bold mb-4">Sobre o Nosso Blog</h3>
                     <p className="text-muted-foreground mb-6">
-                      The 7Jardins blog is your resource for gardening tips, design inspiration, and expert advice to help you create and maintain beautiful outdoor spaces.
+                      O blog 7Jardins é o seu recurso para dicas de jardinagem, inspiração de design e conselhos especializados para ajudá-lo a criar e manter belos espaços exteriores.
                     </p>
                     <Button asChild className="w-full bg-garden-accent hover:bg-garden-accent/90">
-                      <Link to="/contact">Subscribe</Link>
+                      <Link to="/contact">Subscrever</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -216,9 +216,9 @@ const Blog = () => {
                 {/* Popular Tags */}
                 <Card className="mb-8 border-none shadow-md">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-serif font-bold mb-4">Popular Tags</h3>
+                    <h3 className="text-xl font-serif font-bold mb-4">Etiquetas Populares</h3>
                     <div className="flex flex-wrap gap-2">
-                      {['gardening', 'plants', 'design', 'sustainability', 'maintenance', 'summer', 'water conservation', 'pollinators', 'native plants', 'herbs'].map((tag) => (
+                      {['jardinagem', 'plantas', 'design', 'sustentabilidade', 'manutenção', 'verão', 'conservação de água', 'polinizadores', 'plantas nativas', 'ervas'].map((tag) => (
                         <span key={tag} className="bg-earth-light px-3 py-1 text-sm rounded-full">
                           {tag}
                         </span>
@@ -230,7 +230,7 @@ const Blog = () => {
                 {/* Recent Posts */}
                 <Card className="border-none shadow-md">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-serif font-bold mb-4">Recent Posts</h3>
+                    <h3 className="text-xl font-serif font-bold mb-4">Artigos Recentes</h3>
                     <div className="space-y-4">
                       {blogPosts.slice(0, 3).map((post) => (
                         <div key={post.id} className="flex gap-3">

@@ -21,11 +21,11 @@ const Navbar = () => {
   }, []);
   
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
+    { name: "Início", path: "/" },
+    { name: "Sobre", path: "/about" },
+    { name: "Serviços", path: "/services" },
     { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contacto", path: "/contact" },
   ];
   
   return (
@@ -58,7 +58,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Button className="bg-garden-accent text-white hover:bg-garden-accent/90">
-            Get a Quote
+            Pedir Orçamento
           </Button>
         </nav>
         
@@ -93,7 +93,7 @@ const Navbar = () => {
               className="bg-garden-accent text-white hover:bg-garden-accent/90 w-full"
               onClick={() => setIsOpen(false)}
             >
-              Get a Quote
+              Pedir Orçamento
             </Button>
           </div>
         </div>

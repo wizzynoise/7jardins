@@ -31,8 +31,8 @@ const Contact = () => {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted with data:', formData);
-    toast.success('Your message has been sent! We\'ll get back to you soon.');
+    console.log('Formulário submetido com dados:', formData);
+    toast.success('A sua mensagem foi enviada! Entraremos em contacto em breve.');
     setFormData({
       name: '',
       email: '',
@@ -51,9 +51,9 @@ const Contact = () => {
         {/* Hero Section */}
         <section className="relative py-24 bg-garden-dark">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Contact Us</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Contacte-nos</h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Have a question or ready to start your garden project? Get in touch with our team.
+              Tem alguma questão ou está pronto para iniciar o seu projeto de jardim? Entre em contacto com a nossa equipa.
             </p>
           </div>
         </section>
@@ -64,7 +64,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Information */}
               <div>
-                <h2 className="text-3xl font-serif font-bold mb-8">Get In Touch</h2>
+                <h2 className="text-3xl font-serif font-bold mb-8">Contactos</h2>
                 
                 <div className="space-y-8">
                   <div className="flex items-start">
@@ -72,8 +72,8 @@ const Contact = () => {
                       <MapPin className="text-garden-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg">Our Location</h3>
-                      <p className="text-muted-foreground">123 Garden Street, Green City, GC 12345</p>
+                      <h3 className="font-semibold text-lg">A Nossa Localização</h3>
+                      <p className="text-muted-foreground">Rua do Jardim 123, Cidade Verde, CV 12345</p>
                     </div>
                   </div>
                   
@@ -82,7 +82,7 @@ const Contact = () => {
                       <Mail className="text-garden-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg">Email Us</h3>
+                      <h3 className="font-semibold text-lg">Email</h3>
                       <p className="text-muted-foreground">
                         <a href="mailto:info@7jardins.com" className="hover:text-garden-accent">info@7jardins.com</a>
                       </p>
@@ -94,9 +94,9 @@ const Contact = () => {
                       <Phone className="text-garden-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg">Call Us</h3>
+                      <h3 className="font-semibold text-lg">Telefone</h3>
                       <p className="text-muted-foreground">
-                        <a href="tel:+15551234567" className="hover:text-garden-accent">(555) 123-4567</a>
+                        <a href="tel:+351211234567" className="hover:text-garden-accent">(+351) 211 234 567</a>
                       </p>
                     </div>
                   </div>
@@ -106,15 +106,15 @@ const Contact = () => {
                       <Clock className="text-garden-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg">Business Hours</h3>
-                      <p className="text-muted-foreground mb-1">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                      <p className="text-muted-foreground">Saturday: 9:00 AM - 4:00 PM</p>
+                      <h3 className="font-semibold text-lg">Horário de Funcionamento</h3>
+                      <p className="text-muted-foreground mb-1">Segunda a Sexta: 8:00 - 18:00</p>
+                      <p className="text-muted-foreground">Sábado: 9:00 - 16:00</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mt-12">
-                  <h3 className="font-semibold text-lg mb-4">Connect With Us</h3>
+                  <h3 className="font-semibold text-lg mb-4">Siga-nos</h3>
                   <div className="flex space-x-4">
                     <a 
                       href="https://facebook.com" 
@@ -151,15 +151,15 @@ const Contact = () => {
               {/* Contact Form */}
               <div>
                 <div className="bg-white p-8 rounded-lg shadow-lg">
-                  <h2 className="text-3xl font-serif font-bold mb-6">Send Us a Message</h2>
+                  <h2 className="text-3xl font-serif font-bold mb-6">Envie-nos uma Mensagem</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Your Name</Label>
+                        <Label htmlFor="name">O Seu Nome</Label>
                         <Input
                           id="name"
                           name="name"
-                          placeholder="John Doe"
+                          placeholder="João Silva"
                           value={formData.name}
                           onChange={handleChange}
                           required
@@ -167,12 +167,12 @@ const Contact = () => {
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email Address</Label>
+                        <Label htmlFor="email">Endereço de Email</Label>
                         <Input
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="john@example.com"
+                          placeholder="joao@exemplo.com"
                           value={formData.email}
                           onChange={handleChange}
                           required
@@ -182,39 +182,39 @@ const Contact = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number</Label>
+                        <Label htmlFor="phone">Número de Telefone</Label>
                         <Input
                           id="phone"
                           name="phone"
-                          placeholder="(555) 123-4567"
+                          placeholder="(+351) 912 345 678"
                           value={formData.phone}
                           onChange={handleChange}
                         />
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="service">Service Interest</Label>
+                        <Label htmlFor="service">Interesse em Serviço</Label>
                         <Select onValueChange={handleServiceChange} value={formData.service}>
                           <SelectTrigger id="service">
-                            <SelectValue placeholder="Select a service" />
+                            <SelectValue placeholder="Selecione um serviço" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="garden-design">Garden Design</SelectItem>
-                            <SelectItem value="landscaping">Landscaping</SelectItem>
-                            <SelectItem value="maintenance">Garden Maintenance</SelectItem>
-                            <SelectItem value="irrigation">Irrigation Systems</SelectItem>
-                            <SelectItem value="consulting">Consulting</SelectItem>
+                            <SelectItem value="garden-design">Design de Jardins</SelectItem>
+                            <SelectItem value="landscaping">Paisagismo</SelectItem>
+                            <SelectItem value="maintenance">Manutenção de Jardins</SelectItem>
+                            <SelectItem value="irrigation">Sistemas de Irrigação</SelectItem>
+                            <SelectItem value="consulting">Consultoria</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
+                      <Label htmlFor="subject">Assunto</Label>
                       <Input
                         id="subject"
                         name="subject"
-                        placeholder="How can we help you?"
+                        placeholder="Como podemos ajudar?"
                         value={formData.subject}
                         onChange={handleChange}
                         required
@@ -222,11 +222,11 @@ const Contact = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
+                      <Label htmlFor="message">Mensagem</Label>
                       <Textarea
                         id="message"
                         name="message"
-                        placeholder="Tell us more about your project or inquiry..."
+                        placeholder="Conte-nos mais sobre o seu projeto ou dúvida..."
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
@@ -236,7 +236,7 @@ const Contact = () => {
                     
                     <Button type="submit" className="w-full bg-garden-accent hover:bg-garden-accent/90">
                       <Send className="mr-2" size={18} />
-                      Send Message
+                      Enviar Mensagem
                     </Button>
                   </form>
                 </div>
@@ -249,9 +249,9 @@ const Contact = () => {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold mb-4">Find Us</h2>
+              <h2 className="text-3xl font-serif font-bold mb-4">Localização</h2>
               <p className="max-w-2xl mx-auto text-muted-foreground">
-                Visit our location to discuss your garden project in person.
+                Visite o nosso local para discutir o seu projeto de jardim pessoalmente.
               </p>
             </div>
             
@@ -264,7 +264,7 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="7Jardins Location"
+                title="Localização da 7Jardins"
               ></iframe>
             </div>
           </div>

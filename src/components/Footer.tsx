@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="font-serif font-bold text-2xl text-white">Jardins</span>
             </Link>
             <p className="text-white/80 mb-4">
-              Creating beautiful, sustainable gardens that connect people with nature.
+              Criamos jardins bonitos e sustentáveis que ligam as pessoas à natureza.
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com" className="text-white hover:text-garden-light" aria-label="Instagram">
@@ -34,37 +34,37 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-white font-serif text-xl mb-4">Quick Links</h3>
+            <h3 className="text-white font-serif text-xl mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-white/80 hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/" className="text-white/80 hover:text-white transition-colors">Início</Link></li>
+              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors">Sobre Nós</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Serviços</Link></li>
               <li><Link to="/blog" className="text-white/80 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link to="/contact" className="text-white/80 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/contact" className="text-white/80 hover:text-white transition-colors">Contacto</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-white font-serif text-xl mb-4">Services</h3>
+            <h3 className="text-white font-serif text-xl mb-4">Serviços</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Garden Design</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Landscaping</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Garden Maintenance</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Irrigation Systems</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Consulting</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Design de Jardins</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Paisagismo</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Manutenção de Jardins</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Sistemas de Irrigação</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Consultoria</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-white font-serif text-xl mb-4">Contact Us</h3>
+            <h3 className="text-white font-serif text-xl mb-4">Contacte-nos</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="shrink-0 mr-2 text-garden-light" size={20} />
-                <span className="text-white/80">123 Garden Street, Green City, GC 12345</span>
+                <span className="text-white/80">Rua do Jardim 123, Cidade Verde, CV 12345</span>
               </li>
               <li className="flex items-center">
                 <Phone className="shrink-0 mr-2 text-garden-light" size={20} />
-                <a href="tel:+15551234567" className="text-white/80 hover:text-white">(555) 123-4567</a>
+                <a href="tel:+351211234567" className="text-white/80 hover:text-white">(+351) 211 234 567</a>
               </li>
               <li className="flex items-center">
                 <Mail className="shrink-0 mr-2 text-garden-light" size={20} />
@@ -76,7 +76,7 @@ const Footer = () => {
         
         <div className="border-t border-white/20 pt-6 text-center">
           <p className="text-white/60 text-sm">
-            © {currentYear} 7Jardins. All rights reserved.
+            © {currentYear} 7Jardins. Todos os direitos reservados.
           </p>
         </div>
       </div>
