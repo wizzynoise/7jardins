@@ -1,4 +1,7 @@
+
 import React from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, PenTool, Shovel, Leaf, Droplet, Trees, BookOpen, Sunset } from 'lucide-react';
