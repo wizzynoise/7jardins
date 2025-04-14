@@ -18,18 +18,18 @@ const Hero = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-serif font-bold mb-4">
-              Transform Your Outdoor Space
+              Transforme o Seu Espaço Exterior
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8">
-              At 7Jardins, we create beautiful, sustainable gardens that connect people with nature. 
-              From design to maintenance, let us bring your garden dreams to life.
+              Na 7Jardins, criamos jardins bonitos e sustentáveis que ligam as pessoas à natureza.
+              Do design à manutenção, deixe-nos dar vida aos seus sonhos de jardim.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-garden-accent text-white hover:bg-garden-accent/90">
-                <Link to="/services">Our Services</Link>
+                <Link to="/services">Os Nossos Serviços</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact">Contacte-nos</Link>
               </Button>
             </div>
           </div>

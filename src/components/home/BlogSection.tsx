@@ -7,23 +7,23 @@ import { Card, CardContent } from "@/components/ui/card";
 const blogPosts = [
   {
     image: "https://images.unsplash.com/photo-1588329722091-6194cf41b424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
-    title: "10 Summer Garden Maintenance Tips",
-    excerpt: "Keep your garden thriving during the hot summer months with these essential maintenance tips.",
-    date: "June 15, 2023",
-    category: "Maintenance"
+    title: "10 Dicas de Manutenção de Jardim para o Verão",
+    excerpt: "Mantenha o seu jardim próspero durante os meses quentes de verão com estas dicas essenciais de manutenção.",
+    date: "15 de Junho de 2023",
+    category: "Manutenção"
   },
   {
     image: "https://images.unsplash.com/photo-1617934286773-d3262960503c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    title: "Sustainable Gardening Practices for Every Home",
-    excerpt: "Learn how to create an eco-friendly garden that benefits both your family and the environment.",
-    date: "May 22, 2023",
-    category: "Sustainability"
+    title: "Práticas de Jardinagem Sustentável para Todos",
+    excerpt: "Aprenda a criar um jardim ecológico que beneficia tanto a sua família como o ambiente.",
+    date: "22 de Maio de 2023",
+    category: "Sustentabilidade"
   },
   {
     image: "https://images.unsplash.com/photo-1534710961216-75c88202f43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-    title: "Creating a Garden that Attracts Pollinators",
-    excerpt: "Discover which plants and features will help support vital pollinators in your garden.",
-    date: "April 10, 2023",
+    title: "Criar um Jardim que Atrai Polinizadores",
+    excerpt: "Descubra quais as plantas e características que ajudam a apoiar polinizadores vitais no seu jardim.",
+    date: "10 de Abril de 2023",
     category: "Design"
   }
 ];
@@ -33,12 +33,12 @@ const BlogSection = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-garden-accent font-medium mb-2">Our Blog</h2>
+          <h2 className="text-garden-accent font-medium mb-2">O Nosso Blog</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Garden Insights & Tips
+            Dicas e Conhecimentos de Jardinagem
           </h3>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Explore our latest articles for gardening advice, inspiration, and insights from our experts.
+            Explore os nossos artigos mais recentes para conselhos de jardinagem, inspiração e conhecimentos dos nossos especialistas.
           </p>
         </div>
         
@@ -63,7 +63,7 @@ const BlogSection = () => {
                   to="/blog" 
                   className="text-garden-accent font-medium hover:underline"
                 >
-                  Read More
+                  Ler Mais
                 </Link>
               </CardContent>
             </Card>
@@ -72,7 +72,7 @@ const BlogSection = () => {
         
         <div className="text-center">
           <Button asChild className="bg-garden-accent hover:bg-garden-accent/90">
-            <Link to="/blog">View All Posts</Link>
+            <Link to="/blog">Ver Todos os Artigos</Link>
           </Button>
         </div>
       </div>

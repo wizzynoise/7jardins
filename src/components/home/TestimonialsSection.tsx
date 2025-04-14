@@ -5,19 +5,19 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "7Jardins transformed my backyard into an oasis. Their attention to detail and creative vision exceeded all my expectations.",
-    author: "Sarah Johnson",
-    position: "Homeowner"
+    quote: "A 7Jardins transformou o meu quintal num oásis. A sua atenção ao detalhe e visão criativa excederam todas as minhas expectativas.",
+    author: "Sara Oliveira",
+    position: "Proprietária"
   },
   {
-    quote: "The team at 7Jardins understands the balance between aesthetics and sustainability. They designed and installed a beautiful garden that is easy to maintain.",
-    author: "Michael Williams",
-    position: "Property Manager"
+    quote: "A equipa da 7Jardins entende o equilíbrio entre estética e sustentabilidade. Desenharam e instalaram um jardim bonito e fácil de manter.",
+    author: "Miguel Santos",
+    position: "Gestor de Propriedade"
   },
   {
-    quote: "Working with 7Jardins was a pleasure from start to finish. Their professionalism and expertise made our commercial landscaping project a success.",
-    author: "Emily Davis",
-    position: "Business Owner"
+    quote: "Trabalhar com a 7Jardins foi um prazer do início ao fim. O seu profissionalismo e experiência fizeram do nosso projeto de paisagismo comercial um sucesso.",
+    author: "Inês Silva",
+    position: "Proprietária de Negócio"
   }
 ];
 
@@ -26,12 +26,12 @@ const TestimonialsSection = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-garden-accent font-medium mb-2">Testimonials</h2>
+          <h2 className="text-garden-accent font-medium mb-2">Testemunhos</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            What Our Clients Say
+            O Que Dizem Os Nossos Clientes
           </h3>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Don't just take our word for it. Hear from the clients who have experienced the 7Jardins difference.
+            Não acredite apenas na nossa palavra. Ouça os clientes que já experienciaram a diferença 7Jardins.
           </p>
         </div>
         
