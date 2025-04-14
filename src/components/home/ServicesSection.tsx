@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PenTool, Shovel, Leaf, Droplet, Tree } from 'lucide-react';
+import { PenTool, Shovel, Leaf, Droplet, Trees } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -27,7 +26,7 @@ const services = [
     description: "Efficient watering solutions to maintain your garden while conserving water."
   },
   {
-    icon: <Tree size={40} className="text-garden-accent" />,
+    icon: <Trees size={40} className="text-garden-accent" />,
     title: "Consulting",
     description: "Expert advice for DIY gardeners and professionals alike."
   }
