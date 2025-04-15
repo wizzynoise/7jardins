@@ -1,25 +1,19 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Scissors, TreePine, Leaf } from 'lucide-react';
+import { Trees, Leaf } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
-  {
-    icon: <Scissors size={40} className="text-green-500" />,
-    title: "Corte",
-    description: "Cuidamos do seu jardim com serviços de corte de grama e plantas, mantendo sempre um visual impecável."
-  },
   {
     icon: <Leaf size={40} className="text-green-500" />,
     title: "Manutenção de Jardins",
     description: "Serviços regulares de manutenção para manter o seu jardim bonito durante todo o ano."
   },
   {
-    icon: <TreePine size={40} className="text-green-500" />,
+    icon: <Trees size={40} className="text-green-500" />,
     title: "Plantação de Árvores",
-    description: "Plantamos árvores para dar mais vida ao seu jardim ou quintal, com cuidado e expertise."
+    description: "Plantamos e vendemos árvores para dar mais vida ao seu jardim ou quintal."
   }
 ];
 

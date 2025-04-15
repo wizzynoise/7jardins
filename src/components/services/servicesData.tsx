@@ -1,90 +1,34 @@
 import React from 'react';
-import { PenTool, Shovel, Leaf, Droplet, BookOpen, Sunset, Trees } from 'lucide-react';
+import { Leaf, Trees } from 'lucide-react';
 
 export const services = [
-  {
-    id: "design",
-    title: "Design de Jardins",
-    icon: <PenTool size={36} className="text-garden-accent" />,
-    description: "Os nossos designers experientes criam planos de jardim personalizados adaptados às suas necessidades específicas, preferências e condições do local.",
-    features: [
-      "Consulta inicial e avaliação do local",
-      "Design conceptual e visualização",
-      "Planos detalhados de plantação e paisagismo",
-      "Assistência na seleção de materiais",
-      "Planeamento de irrigação e iluminação"
-    ],
-    image: "https://images.unsplash.com/photo-1528092744838-b91de0a10615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-  },
-  {
-    id: "landscaping",
-    title: "Paisagismo",
-    icon: <Shovel size={36} className="text-garden-accent" />,
-    description: "Transformamos o seu espaço exterior com instalação profissional de elementos de vegetação e estruturas.",
-    features: [
-      "Preparação e nivelamento do terreno",
-      "Instalação de estruturas (pátios, caminhos, muros de contenção)",
-      "Plantação de árvores, arbustos e flores",
-      "Cobertura vegetal e melhoramento do solo",
-      "Instalação de elementos aquáticos"
-    ],
-    image: "https://images.unsplash.com/photo-1626863905122-b51b8413e384?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-  },
   {
     id: "maintenance",
     title: "Manutenção de Jardins",
     icon: <Leaf size={36} className="text-garden-accent" />,
-    description: "Os nossos serviços de manutenção contínua mantêm o seu jardim bonito e saudável ao longo das estações.",
+    description: "Serviços profissionais de manutenção para manter o seu jardim bonito e saudável durante todo o ano.",
     features: [
-      "Cuidados regulares com o relvado e corte",
-      "Poda e cuidados com a saúde das plantas",
-      "Limpeza sazonal e cobertura vegetal",
-      "Fertilização e controlo de ervas daninhas",
-      "Gestão de pragas e doenças"
+      "Manutenção regular do jardim",
+      "Poda e cuidados com plantas",
+      "Controle de pragas e doenças",
+      "Fertilização e tratamento do solo",
+      "Limpeza e organização do espaço"
     ],
     image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
-    id: "irrigation",
-    title: "Sistemas de Irrigação",
-    icon: <Droplet size={36} className="text-garden-accent" />,
-    description: "Projetamos e instalamos sistemas de irrigação eficientes que conservam água enquanto mantêm o seu jardim saudável.",
+    id: "planting",
+    title: "Plantação de Árvores",
+    icon: <Trees size={36} className="text-garden-accent" />,
+    description: "Serviços especializados de plantação e cuidado de árvores para embelezar o seu espaço exterior.",
     features: [
-      "Design personalizado do sistema de irrigação",
-      "Instalação de aspersores eficientes em termos de consumo de água",
-      "Irrigação por gotejamento para rega direcionada",
-      "Configuração e programação de controladores inteligentes",
-      "Manutenção e reparação do sistema"
+      "Plantação profissional de árvores",
+      "Seleção de espécies adequadas",
+      "Preparação do solo",
+      "Cuidados pós-plantação",
+      "Venda de árvores selecionadas"
     ],
-    image: "https://images.unsplash.com/photo-1576627096430-88c7969ada33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-  },
-  {
-    id: "consulting",
-    title: "Consultoria",
-    icon: <BookOpen size={36} className="text-garden-accent" />,
-    description: "Os nossos especialistas fornecem aconselhamento profissional para ajudá-lo a tomar decisões informadas sobre o seu jardim.",
-    features: [
-      "Orientação na seleção de plantas",
-      "Diagnóstico e soluções de problemas",
-      "Testes ao solo e recomendações de melhoramento",
-      "Práticas de jardinagem sustentável",
-      "Assistência no planeamento de projetos DIY"
-    ],
-    image: "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-  },
-  {
-    id: "seasonal",
-    title: "Serviços Sazonais",
-    icon: <Sunset size={36} className="text-garden-accent" />,
-    description: "Fornecemos cuidados especializados para o seu jardim com a mudança das estações, garantindo beleza durante todo o ano.",
-    features: [
-      "Preparação e plantação do jardim na primavera",
-      "Manutenção e controlo de pragas no verão",
-      "Limpeza e preparação para o inverno no outono",
-      "Proteção e planeamento no inverno",
-      "Iluminação e decoração para ocasiões festivas"
-    ],
-    image: "https://images.unsplash.com/photo-1603201236596-eb1a63eb0ede?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2033&q=80"
+    image: "https://images.unsplash.com/photo-1599708153386-62bf3adce970?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   }
 ];
 

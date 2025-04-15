@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -95,9 +94,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Telefone</h3>
-                      <p className="text-muted-foreground">
-                        <a href="tel:+351211234567" className="hover:text-garden-accent">(+351) 211 234 567</a>
-                      </p>
+                      <p className="text-muted-foreground">Em atualização</p>
                     </div>
                   </div>
                   

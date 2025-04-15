@@ -41,9 +41,8 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-serif text-xl mb-4">Serviços</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Corte</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Manutenção de Jardins</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Plantação de Árvores</Link></li>
+              <li><Link to="/services#maintenance" className="text-white/80 hover:text-white transition-colors">Manutenção de Jardins</Link></li>
+              <li><Link to="/services#planting" className="text-white/80 hover:text-white transition-colors">Plantação de Árvores</Link></li>
             </ul>
           </div>
           
@@ -56,7 +55,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="shrink-0 mr-2 text-garden-light" size={20} />
-                <a href="tel:+351211234567" className="text-white/80 hover:text-white">(+351) 211 234 567</a>
+                <span className="text-white/80">Em atualização</span>
               </li>
               <li className="flex items-center">
                 <Mail className="shrink-0 mr-2 text-garden-light" size={20} />
