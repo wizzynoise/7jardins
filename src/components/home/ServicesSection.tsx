@@ -1,58 +1,47 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PenTool, Shovel, Leaf, Droplet, Trees } from 'lucide-react';
+import { Scissors, TreePine, Leaf } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
   {
-    icon: <PenTool size={40} className="text-garden-accent" />,
-    title: "Design de Jardins",
-    description: "Designs de jardim personalizados adaptados ao seu espaço, estilo e necessidades."
+    icon: <Scissors size={40} className="text-green-500" />,
+    title: "Corte",
+    description: "Cuidamos do seu jardim com serviços de corte de grama e plantas, mantendo sempre um visual impecável."
   },
   {
-    icon: <Shovel size={40} className="text-garden-accent" />,
-    title: "Paisagismo",
-    description: "Serviços de paisagismo completo desde estruturas até à plantação."
-  },
-  {
-    icon: <Leaf size={40} className="text-garden-accent" />,
+    icon: <Leaf size={40} className="text-green-500" />,
     title: "Manutenção de Jardins",
-    description: "Manutenção regular para manter o seu jardim saudável e bonito durante todo o ano."
+    description: "Serviços regulares de manutenção para manter o seu jardim bonito durante todo o ano."
   },
   {
-    icon: <Droplet size={40} className="text-garden-accent" />,
-    title: "Sistemas de Irrigação",
-    description: "Soluções eficientes de rega para manter o seu jardim enquanto conserva água."
-  },
-  {
-    icon: <Trees size={40} className="text-garden-accent" />,
-    title: "Consultoria",
-    description: "Aconselhamento especializado para jardineiros DIY e profissionais."
+    icon: <TreePine size={40} className="text-green-500" />,
+    title: "Plantação de Árvores",
+    description: "Plantamos árvores para dar mais vida ao seu jardim ou quintal, com cuidado e expertise."
   }
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-garden-accent font-medium mb-2">Os Nossos Serviços</h2>
+          <h2 className="text-green-600 font-medium mb-2">Os Nossos Serviços</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">
             O Que Oferecemos
           </h3>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Desde o conceito inicial até à manutenção contínua, fornecemos serviços completos de jardinagem
-            para satisfazer todas as necessidades do seu espaço exterior.
+            Serviços profissionais de jardinagem para transformar e manter o seu espaço exterior.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <Card key={index} className="service-card border-none shadow-md">
+            <Card key={index} className="service-card border-none shadow-lg hover:shadow-xl transition-all duration-300">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="mb-4">
+                <div className="mb-4 transform transition-all duration-300 hover:scale-110">
                   {service.icon}
                 </div>
                 <h4 className="text-xl font-serif font-bold mb-2">{service.title}</h4>
@@ -63,7 +52,8 @@ const ServicesSection = () => {
         </div>
         
         <div className="text-center">
-          <Button asChild className="bg-garden-accent hover:bg-garden-accent/90">
+          <Button asChild 
+            className="bg-green-500 hover:bg-green-600 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
             <Link to="/services">Ver Todos os Serviços</Link>
           </Button>
         </div>

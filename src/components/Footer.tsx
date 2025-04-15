@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,9 +26,6 @@ const Footer = () => {
               <a href="https://facebook.com" className="text-white hover:text-garden-light" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="https://twitter.com" className="text-white hover:text-garden-light" aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
             </div>
           </div>
           
@@ -37,9 +33,7 @@ const Footer = () => {
             <h3 className="text-white font-serif text-xl mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="text-white/80 hover:text-white transition-colors">Início</Link></li>
-              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors">Sobre Nós</Link></li>
               <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Serviços</Link></li>
-              <li><Link to="/blog" className="text-white/80 hover:text-white transition-colors">Blog</Link></li>
               <li><Link to="/contact" className="text-white/80 hover:text-white transition-colors">Contacto</Link></li>
             </ul>
           </div>
@@ -47,11 +41,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-serif text-xl mb-4">Serviços</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Design de Jardins</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Paisagismo</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Corte</Link></li>
               <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Manutenção de Jardins</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Sistemas de Irrigação</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Consultoria</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-white transition-colors">Plantação de Árvores</Link></li>
             </ul>
           </div>
           
@@ -68,7 +60,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="shrink-0 mr-2 text-garden-light" size={20} />
-                <a href="mailto:info@7jardins.com" className="text-white/80 hover:text-white">info@7jardins.com</a>
+                <a href="mailto:sjgomesarouca@gmail.com" className="text-white/80 hover:text-white">sjgomesarouca@gmail.com</a>
               </li>
             </ul>
           </div>

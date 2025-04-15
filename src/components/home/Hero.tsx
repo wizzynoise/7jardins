@@ -2,14 +2,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Phone } from 'lucide-react';
 
 const Hero = () => {
   return (
     <div className="relative h-screen w-full">
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
         style={{ 
-          backgroundImage: 'url(https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80)' 
+          backgroundImage: 'url(https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)' 
         }}
       ></div>
       <div className="hero-overlay absolute inset-0"></div>
@@ -21,15 +22,22 @@ const Hero = () => {
               Transforme o Seu Espaço Exterior
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8">
-              Na 7Jardins, criamos jardins bonitos e sustentáveis que ligam as pessoas à natureza.
-              Do design à manutenção, deixe-nos dar vida aos seus sonhos de jardim.
+              Serviços profissionais de jardinagem. Desde corte de relva até à manutenção completa do seu jardim.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-garden-accent text-white hover:bg-garden-accent/90">
-                <Link to="/services">Os Nossos Serviços</Link>
+              <Button asChild size="lg" 
+                className="bg-green-500 hover:bg-green-600 text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                <Link to="/services" className="flex items-center">
+                  Ver Serviços
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <Link to="/contact">Contacte-nos</Link>
+              <Button asChild variant="outline" size="lg" 
+                className="border-2 border-white text-white hover:bg-white/20 transform transition-all duration-300 hover:scale-105">
+                <Link to="/contact" className="flex items-center">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Contacte-nos
+                </Link>
               </Button>
             </div>
           </div>

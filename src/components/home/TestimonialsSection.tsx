@@ -5,19 +5,19 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "A 7Jardins transformou o meu quintal num oásis. A sua atenção ao detalhe e visão criativa excederam todas as minhas expectativas.",
-    author: "Sara Oliveira",
-    position: "Proprietária"
+    quote: "O trabalho realizado foi fantástico! O meu jardim nunca esteve tão bonito. A equipe foi muito profissional e atenciosa. Recomendo a todos!",
+    author: "Maria Silva",
+    position: "Cliente Satisfeita"
   },
   {
-    quote: "A equipa da 7Jardins entende o equilíbrio entre estética e sustentabilidade. Desenharam e instalaram um jardim bonito e fácil de manter.",
-    author: "Miguel Santos",
-    position: "Gestor de Propriedade"
+    quote: "Desde que fizemos a manutenção do nosso jardim, ele nunca mais foi o mesmo! Ficou incrível e o serviço foi de excelência. Obrigado!",
+    author: "João Santos",
+    position: "Proprietário"
   },
   {
-    quote: "Trabalhar com a 7Jardins foi um prazer do início ao fim. O seu profissionalismo e experiência fizeram do nosso projeto de paisagismo comercial um sucesso.",
-    author: "Inês Silva",
-    position: "Proprietária de Negócio"
+    quote: "Fiquei impressionado com a rapidez e a qualidade do serviço. A plantação de árvores foi feita de forma cuidadosa, e o meu jardim agora está ainda mais verde.",
+    author: "Ana Oliveira",
+    position: "Cliente Residencial"
   }
 ];
 
