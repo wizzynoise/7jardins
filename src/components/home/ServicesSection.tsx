@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Trees, Leaf } from 'lucide-react';
+import { Trees, Leaf, Scissors } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -14,6 +15,11 @@ const services = [
     icon: <Trees size={40} className="text-green-500" />,
     title: "Plantação de Árvores",
     description: "Plantamos e vendemos árvores para dar mais vida ao seu jardim ou quintal."
+  },
+  {
+    icon: <Scissors size={40} className="text-green-500" />,
+    title: "Corte de Relva",
+    description: "Serviço especializado de corte de relva para manter o seu jardim sempre bem cuidado."
   }
 ];
 

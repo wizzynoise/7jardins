@@ -12,10 +12,13 @@ const AboutSection = () => {
           <div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1590856029620-9f1bbfd5248d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" 
+                src="/garden-professional.jpg" 
                 alt="Profissional de jardinagem a trabalhar" 
                 className="rounded-lg shadow-lg w-full object-cover"
                 style={{ height: "480px" }}
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1590856029620-9f1bbfd5248d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80";
+                }}
               />
               <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-lg shadow-lg hidden lg:block">
                 <p className="font-serif text-3xl text-garden-accent font-bold">30+</p>
