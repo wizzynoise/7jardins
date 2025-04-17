@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, TreePalm } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2" aria-label="Home">
           <div className="w-10 h-10 bg-garden-accent rounded-full flex items-center justify-center">
             <span className="text-white font-serif font-bold text-xl">7</span>
           </div>
@@ -51,14 +51,21 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`font-medium hover:text-garden-accent transition-colors ${
-                scrolled ? 'text-foreground' : 'text-white'
+                scrolled ? "text-foreground" : "text-white"
               }`}
+              aria-label={link.name}
             >
               {link.name}
             </Link>
           ))}
-          <Button className="bg-garden-accent text-white hover:bg-garden-accent/90">
+          <Button
+            className="bg-garden-accent text-white hover:bg-garden-accent/90"
+            aria-label="Pedir Orçamento"
+            asChild
+          >
+            <a href="/contact" target="_blank" rel="noopener noreferrer">
             Pedir Orçamento
+            </a>
           </Button>
         </nav>
         
@@ -66,11 +73,12 @@ const Navbar = () => {
         <button
           className="md:hidden text-garden-accent"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close Menu" : "Open Menu"}
         >
           {isOpen ? (
-            <X className="h-6 w-6" />
+            <X />
           ) : (
-            <Menu className="h-6 w-6" />
+            <Menu />
           )}
         </button>
       </div>
@@ -86,12 +94,18 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className="text-foreground font-medium py-2 hover:text-garden-accent"
               >
-                {link.name}
+                {link.name}              
               </Link>
             ))}
-            <Button 
+            <Button
               className="bg-garden-accent text-white hover:bg-garden-accent/90 w-full"
               onClick={() => setIsOpen(false)}
+              aria-label="Pedir Orçamento"
+              asChild
+            >
+              <a href="/contact" target="_blank" rel="noopener noreferrer">
+                Pedir Orçamento
+              </a>
             >
               Pedir Orçamento
             </Button>

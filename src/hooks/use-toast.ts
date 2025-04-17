@@ -6,7 +6,7 @@ import type {
 } from "@/components/ui/toast"
 
 const TOAST_LIMIT = 1
-const TOAST_REMOVE_DELAY = 1000000
+const TOAST_REMOVE_DELAY = 5000
 
 type ToasterToast = ToastProps & {
   id: string
@@ -29,7 +29,7 @@ function genId() {
   return count.toString()
 }
 
-type ActionType = typeof actionTypes
+export type ActionType = typeof actionTypes
 
 type Action =
   | {
@@ -139,6 +139,7 @@ function dispatch(action: Action) {
 
 type Toast = Omit<ToasterToast, "id">
 
+// Function to create and dispatch a toast notification
 function toast({ ...props }: Toast) {
   const id = genId()
 
@@ -168,6 +169,7 @@ function toast({ ...props }: Toast) {
   }
 }
 
+// Hook to manage toast state and interactions
 function useToast() {
   const [state, setState] = React.useState<State>(memoryState)
 
@@ -188,4 +190,4 @@ function useToast() {
   }
 }
 
-export { useToast, toast }
+export { useToast, toast, Action, ToasterToast }

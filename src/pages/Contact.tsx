@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Instagram, Facebook, Twitter, Pinterest } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -72,7 +72,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">A Nossa Localização</h3>
-                      <p className="text-muted-foreground">Rua do Jardim 123, Cidade Verde, CV 12345</p>
+                      <p className="text-muted-foreground">Travessa do Cabo, 26, Rossas, 4540-475 Arouca</p>
                     </div>
                   </div>
                   
@@ -83,7 +83,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg">Email</h3>
                       <p className="text-muted-foreground">
-                        <a href="mailto:info@7jardins.com" className="hover:text-garden-accent">info@7jardins.com</a>
+                        <a href="mailto:geral@7jardins.com" className="hover:text-garden-accent">geral@7jardins.com</a>
                       </p>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Telefone</h3>
-                      <p className="text-muted-foreground">Em atualização</p>
+                      <p className="text-muted-foreground">912 345 678</p>
                     </div>
                   </div>
                   
@@ -113,33 +113,41 @@ const Contact = () => {
                 <div className="mt-12">
                   <h3 className="font-semibold text-lg mb-4">Siga-nos</h3>
                   <div className="flex space-x-4">
-                    <a 
-                      href="https://facebook.com" 
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-garden-light hover:bg-garden-medium text-garden-accent p-3 rounded-full transition-colors"
-                      aria-label="Facebook"
+                      aria-label="Facebook (Opens in a new tab)"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                      <Facebook />
                     </a>
-                    <a 
-                      href="https://instagram.com" 
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-garden-light hover:bg-garden-medium text-garden-accent p-3 rounded-full transition-colors"
-                      aria-label="Instagram" 
+                      aria-label="Instagram (Opens in a new tab)"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                      <Instagram />
                     </a>
-                    <a 
-                      href="https://twitter.com" 
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-garden-light hover:bg-garden-medium text-garden-accent p-3 rounded-full transition-colors"
-                      aria-label="Twitter" 
+                      aria-label="Twitter (Opens in a new tab)"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                      <Twitter />
                     </a>
-                    <a 
-                      href="https://pinterest.com" 
+                    <a
+                      href="https://pinterest.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-garden-light hover:bg-garden-medium text-garden-accent p-3 rounded-full transition-colors"
-                      aria-label="Pinterest"
+                      aria-label="Pinterest (Opens in a new tab)"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 12h8"></path><path d="M12 8v8"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                      <Pinterest />
                     </a>
                   </div>
                 </div>
@@ -169,7 +177,8 @@ const Contact = () => {
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="joao@exemplo.com"
+                          placeholder="joao@exemplo.com.pt"
+                          required
                           value={formData.email}
                           onChange={handleChange}
                           required
@@ -183,11 +192,11 @@ const Contact = () => {
                         <Input
                           id="phone"
                           name="phone"
-                          placeholder="(+351) 912 345 678"
+                          type="tel"
+                          pattern="[0-9]{9}"
+                          placeholder="912 345 678"
                           value={formData.phone}
                           onChange={handleChange}
-                        />
-                      </div>
                       
                       <div className="space-y-2">
                         <Label htmlFor="service">Interesse em Serviço</Label>
@@ -254,7 +263,7 @@ const Contact = () => {
             
             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sbg!4v1623660698863!5m2!1sen!2sbg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.550195191421!2d-8.254991623480658!3d40.93158687137478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23070e0c7a5499%3A0x92fb1f2b9fc57aeb!2sTravessa%20do%20Cabo%2C%2026%2C%204540-475%20Rossas!5e0!3m2!1sen!2spt-PT!4v1717414049707!5m2!1sen!2spt-PT"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

@@ -1,20 +1,18 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { blogPosts, BlogPost } from '@/data/blogPosts';
+import { categories } from '@/data/categories';
 
-const blogPosts = [
+const BlogPostPreview = ({ post }: { post: BlogPost }) => (
+  <div className="flex gap-3">
+    <img
   {
-    id: 1,
-    title: "10 Dicas de Manutenção de Jardins para o Verão",
-    excerpt: "Mantenha o seu jardim próspero durante os meses quentes de verão com estas dicas essenciais de manutenção.",
-    content: "O verão é um período crítico para os cuidados com o jardim. Com estas dez dicas, pode garantir que o seu jardim não só sobrevive ao calor, mas também prospera durante toda a estação...",
-    image: "https://images.unsplash.com/photo-1588329722091-6194cf41b424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
     date: "15 de Junho, 2023",
     author: "Sofia Martinez",
     category: "Manutenção",
@@ -38,53 +36,16 @@ const blogPosts = [
     content: "Polinizadores como abelhas, borboletas e beija-flores são essenciais para jardins e ecossistemas saudáveis. Eis como tornar o seu jardim num refúgio para estas criaturas importantes...",
     image: "https://images.unsplash.com/photo-1534710961216-75c88202f43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
     date: "10 de Abril, 2023",
-    author: "Amara Johnson",
-    category: "Design",
-    tags: ["polinizadores", "abelhas", "borboletas", "flores nativas"]
-  },
-  {
-    id: 4,
-    title: "Princípios de Design de Jardins Japoneses para Espaços Pequenos",
-    excerpt: "Adapte elementos tradicionais de jardins japoneses para o seu compacto jardim urbano.",
-    content: "Não precisa de hectares de terreno para criar um sereno jardim de inspiração japonesa. Aprenda a incorporar elementos-chave como água, pedra e plantas cuidadosamente selecionadas...",
-    image: "https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    date: "5 de Março, 2023",
-    author: "Sofia Martinez",
-    category: "Design",
-    tags: ["japonês", "jardins pequenos", "zen", "princípios de design"]
-  },
-  {
-    id: 5,
-    title: "Paisagismo Comestível: Jardins Bonitos e Deliciosos",
-    excerpt: "Combine plantas ornamentais e comestíveis para criar um jardim que é tanto bonito como produtivo.",
-    content: "O paisagismo comestível é a mistura perfeita de forma e função. Aprenda a integrar frutas, legumes e ervas no design do seu jardim ornamental...",
-    image: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80",
-    date: "18 de Fevereiro, 2023",
-    author: "Miguel Rodriguez",
-    category: "Jardins Comestíveis",
-    tags: ["legumes", "ervas", "flores comestíveis", "jardinagem alimentar"]
-  },
-  {
-    id: 6,
-    title: "Terapia de Jardim: Como a Jardinagem Melhora a Saúde Mental",
-    excerpt: "Explore os benefícios psicológicos da jardinagem e como criar um espaço de jardim terapêutico.",
-    content: "A jardinagem é mais do que um hobby — é uma forma de terapia. Descubra a ciência por detrás dos efeitos positivos da jardinagem na saúde mental e como maximizar estes benefícios...",
-    image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    date: "25 de Janeiro, 2023",
-    author: "Amara Johnson",
-    category: "Bem-estar",
-    tags: ["saúde mental", "terapia", "redução do stress", "mindfulness"]
-  }
-];
-
-const categories = [
-  "Todos",
-  "Design",
-  "Manutenção",
-  "Sustentabilidade",
-  "Jardins Comestíveis",
-  "Bem-estar"
-];
+    alt={post.title}
+    src={post.image}
+    className="w-16 h-16 object-cover rounded"
+  />
+    <div>
+      <CardTitle className="font-medium line-clamp-2">{post.title}</CardTitle>
+      <CardDescription className="text-sm text-muted-foreground">{post.date}</CardDescription>
+    </div>
+  </div>
+);
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = React.useState("Todos");
@@ -93,7 +54,7 @@ const Blog = () => {
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = selectedCategory === "Todos" || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     
     return matchesCategory && matchesSearch;
   });
@@ -106,7 +67,7 @@ const Blog = () => {
         {/* Hero Section */}
         <section className="relative py-24 bg-garden-dark">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Blog de Jardim</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Blog</h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
               Dicas, insights e inspiração para criar e manter o seu jardim perfeito.
             </p>
@@ -158,8 +119,8 @@ const Blog = () => {
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                           <div className="md:col-span-2">
                             <img 
-                              src={post.image} 
-                              alt={post.title} 
+                              alt={post.title}
+                              src={post.image}
                               className="w-full h-48 object-cover"
                             />
                           </div>
@@ -173,7 +134,7 @@ const Blog = () => {
                             <div className="flex justify-between items-center">
                               <span className="text-sm">Por {post.author}</span>
                               <Button asChild variant="link" className="text-garden-accent p-0">
-                                <Link to={`/blog/${post.id}`}>Ler Mais</Link>
+                                <Link to={`/blog/${post.id}`}>Ler mais</Link>
                               </Button>
                             </div>
                           </CardContent>
@@ -228,24 +189,12 @@ const Blog = () => {
                 </Card>
                 
                 {/* Recent Posts */}
-                <Card className="border-none shadow-md">
+                <Card className="border-none shadow-md mt-8">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-serif font-bold mb-4">Artigos Recentes</h3>
-                    <div className="space-y-4">
-                      {blogPosts.slice(0, 3).map((post) => (
-                        <div key={post.id} className="flex gap-3">
-                          <img 
-                            src={post.image} 
-                            alt={post.title} 
-                            className="w-16 h-16 object-cover rounded"
-                          />
-                          <div>
-                            <h4 className="font-medium line-clamp-2">{post.title}</h4>
-                            <p className="text-sm text-muted-foreground">{post.date}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    <h3 className="text-xl font-serif font-bold mb-4">Posts Recentes</h3>
+                    {blogPosts.slice(0, 3).map((post) => (
+                      <BlogPostPreview key={post.id} post={post} />
+                    ))}
                   </CardContent>
                 </Card>
               </div>
