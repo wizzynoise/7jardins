@@ -5,32 +5,32 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1558293842-c0fd3db86157?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+    image: "https://images.unsplash.com/photo-1558293842-c0fd3db86157?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",
     title: "Jardim Residencial Moderno",
     category: "Residencial"
   },
   {
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80",
+    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2832&q=80",
     title: "Paisagismo de Praça Comercial",
     category: "Comercial"
   },
   {
-    image: "https://images.unsplash.com/photo-1584479898061-15742e14f50d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "https://images.unsplash.com/photo-1584479898061-15742e14f50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     title: "Jardim em Terraço Urbano",
     category: "Urbano"
   },
   {
-    image: "https://images.unsplash.com/photo-1508285296015-c0b524447532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    image: "https://images.unsplash.com/photo-1508285296015-c0b524447532?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80",
     title: "Jardim Inspirado em Estilo Japonês",
     category: "Temático"
   },
   {
-    image: "https://images.unsplash.com/photo-1542628682-88321d2a4828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "https://images.unsplash.com/photo-1542628682-88321d2a4828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     title: "Jardim de Moradia Mediterrânica",
     category: "Residencial"
   },
   {
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80",
+    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2832&q=80",
     title: "Restauro de Parque Público",
     category: "Público"
   }
@@ -57,6 +57,10 @@ const GallerySection = () => {
                 src={project.image} 
                 alt={project.title} 
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.backgroundColor = '#A5D6A7';
+                }}
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
                 <span className="text-garden-light text-sm">{project.category}</span>
@@ -67,7 +71,7 @@ const GallerySection = () => {
         </div>
         
         <div className="text-center">
-          <Button asChild className="bg-garden-accent hover:bg-garden-accent/90">
+          <Button asChild className="bg-garden-accent hover:bg-garden-accent/90 text-white">
             <Link to="/projects">Ver Todos os Projetos</Link>
           </Button>
         </div>

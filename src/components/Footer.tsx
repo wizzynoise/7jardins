@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Instagram, Facebook, TreePalm } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -55,7 +56,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="shrink-0 mr-2 text-garden-light" size={20} />
-                <span className="text-white/80">912 345 678</span>
+                <span className="text-white/80">Em atualização</span>
               </li>
               <li className="flex items-center">
                 <Mail className="shrink-0 mr-2 text-garden-light" size={20} />

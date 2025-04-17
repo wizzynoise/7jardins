@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { Menu, X, TreePalm } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -63,9 +63,9 @@ const Navbar = () => {
             aria-label="Pedir Orçamento"
             asChild
           >
-            <a href="/contact" target="_blank" rel="noopener noreferrer">
-            Pedir Orçamento
-            </a>
+            <Link to="/contact">
+              Pedir Orçamento
+            </Link>
           </Button>
         </nav>
         
@@ -102,11 +102,9 @@ const Navbar = () => {
               aria-label="Pedir Orçamento"
               asChild
             >
-              <a href="/contact" target="_blank" rel="noopener noreferrer">
+              <Link to="/contact">
                 Pedir Orçamento
-              </a>
-            >
-              Pedir Orçamento
+              </Link>
             </Button>
           </div>
         </div>

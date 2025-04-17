@@ -7,17 +7,17 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
   {
-    icon: <Leaf size={40} className="text-green-500" />,
+    icon: <Leaf size={40} className="text-garden-accent" />,
     title: "Manutenção de Jardins",
     description: "Serviços regulares de manutenção para manter o seu jardim bonito durante todo o ano."
   },
   {
-    icon: <Trees size={40} className="text-green-500" />,
+    icon: <Trees size={40} className="text-garden-accent" />,
     title: "Plantação de Árvores",
     description: "Plantamos e vendemos árvores para dar mais vida ao seu jardim ou quintal."
   },
   {
-    icon: <Scissors size={40} className="text-green-500" />,
+    icon: <Scissors size={40} className="text-garden-accent" />,
     title: "Corte de Relva",
     description: "Serviço especializado de corte de relva para manter o seu jardim sempre bem cuidado."
   }
@@ -28,7 +28,7 @@ const ServicesSection = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-green-600 font-medium mb-2">Os Nossos Serviços</h2>
+          <h2 className="text-garden-accent font-medium mb-2">Os Nossos Serviços</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">
             O Que Oferecemos
           </h3>
@@ -53,7 +53,7 @@ const ServicesSection = () => {
         
         <div className="text-center">
           <Button asChild 
-            className="bg-green-500 hover:bg-green-600 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+            className="bg-garden-accent hover:bg-garden-accent/90 text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
             <Link to="/services">Ver Todos os Serviços</Link>
           </Button>
         </div>

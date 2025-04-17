@@ -10,7 +10,11 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
         style={{ 
-          backgroundImage: 'url(https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)' 
+          backgroundImage: 'url(https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)' 
+        }}
+        onError={(e) => {
+          const target = e.target as HTMLElement;
+          target.style.backgroundColor = '#2E7D32';
         }}
       ></div>
       <div className="hero-overlay absolute inset-0"></div>
@@ -26,7 +30,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" 
-                className="bg-green-500 hover:bg-green-600 text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                className="bg-garden-accent hover:bg-garden-accent/90 text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                 <Link to="/services" className="flex items-center">
                   Ver Serviços
                   <ArrowRight className="ml-2 h-5 w-5" />

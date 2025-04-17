@@ -6,25 +6,25 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const blogPosts = [
   {
-    image: "https://images.unsplash.com/photo-1588329722091-6194cf41b424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
+    image: "https://images.unsplash.com/photo-1588329722091-6194cf41b424?ixlib=rb-4.0.3&auto=format&fit=crop&w=1964&q=80",
     title: "10 Dicas de Manutenção de Jardim para o Verão",
     excerpt: "Mantenha o seu jardim próspero durante os meses quentes de verão com estas dicas essenciais de manutenção.",
     date: "15 de Junho de 2023",
     category: "Manutenção"
   },
   {
-    image: "https://images.unsplash.com/photo-1617934286773-d3262960503c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "https://images.unsplash.com/photo-1617934286773-d3262960503c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     title: "Práticas de Jardinagem Sustentável para Todos",
     excerpt: "Aprenda a criar um jardim ecológico que beneficia tanto a sua família como o ambiente.",
     date: "22 de Maio de 2023",
     category: "Sustentabilidade"
   },
   {
-    image: "https://images.unsplash.com/photo-1534710961216-75c88202f43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-    title: "Criar um Jardim que Atrai Polinizadores",
-    excerpt: "Descubra quais as plantas e características que ajudam a apoiar polinizadores vitais no seu jardim.",
+    image: "https://images.unsplash.com/photo-1534710961216-75c88202f43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+    title: "Árvores à Venda: As Melhores Espécies para seu Jardim",
+    excerpt: "Descubra as melhores árvores para comprar para o seu jardim, adequadas ao clima português.",
     date: "10 de Abril de 2023",
-    category: "Design"
+    category: "Vendas"
   }
 ];
 
@@ -38,7 +38,7 @@ const BlogSection = () => {
             Dicas e Conhecimentos de Jardinagem
           </h3>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Explore os nossos artigos mais recentes para conselhos de jardinagem, inspiração e conhecimentos dos nossos especialistas.
+            Explore os nossos artigos mais recentes para conselhos de jardinagem, inspiração e informações sobre árvores à venda.
           </p>
         </div>
         
@@ -50,6 +50,10 @@ const BlogSection = () => {
                   src={post.image} 
                   alt={post.title} 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.backgroundColor = '#E8F5E9';
+                  }}
                 />
               </div>
               <CardContent className="p-6">
@@ -71,7 +75,7 @@ const BlogSection = () => {
         </div>
         
         <div className="text-center">
-          <Button asChild className="bg-garden-accent hover:bg-garden-accent/90">
+          <Button asChild className="bg-garden-accent hover:bg-garden-accent/90 text-white">
             <Link to="/blog">Ver Todos os Artigos</Link>
           </Button>
         </div>
