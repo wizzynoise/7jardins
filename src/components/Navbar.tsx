@@ -73,7 +73,6 @@ const Navbar = () => {
         <button
           className="md:hidden text-garden-accent"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close Menu" : "Open Menu"}
         >
           {isOpen ? (
             <X />

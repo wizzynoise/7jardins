@@ -6,9 +6,9 @@ import type {
 } from "@/components/ui/toast"
 
 const TOAST_LIMIT = 1
-const TOAST_REMOVE_DELAY = 5000
+const TOAST_REMOVE_DELAY = 5000 // Delay before a toast is removed from the list
 
-type ToasterToast = ToastProps & {
+export type ToasterToast = ToastProps & {
   id: string
   title?: React.ReactNode
   description?: React.ReactNode
@@ -29,7 +29,7 @@ function genId() {
   return count.toString()
 }
 
-export type ActionType = typeof actionTypes
+type ActionType = typeof actionTypes
 
 type Action =
   | {
@@ -48,13 +48,14 @@ type Action =
       type: ActionType["REMOVE_TOAST"]
       toastId?: ToasterToast["id"]
     }
+  // Represents the possible actions that can be dispatched to the reducer
 
-interface State {
+type State = {
   toasts: ToasterToast[]
 }
+  // Represents the state of the toast manager, containing an array of toasts
 
-const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
-
+const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>() // Tracks timeouts for toast removal
 const addToRemoveQueue = (toastId: string) => {
   if (toastTimeouts.has(toastId)) {
     return
@@ -70,8 +71,9 @@ const addToRemoveQueue = (toastId: string) => {
 
   toastTimeouts.set(toastId, timeout)
 }
+  // Adds a toast's removal timeout to the queue
 
-export const reducer = (state: State, action: Action): State => {
+export const reducer = (state: State, action: Action): State => { // Reducer function to manage toast state
   switch (action.type) {
     case "ADD_TOAST":
       return {
@@ -89,8 +91,6 @@ export const reducer = (state: State, action: Action): State => {
 
     case "DISMISS_TOAST": {
       const { toastId } = action
-
-      // ! Side effects ! - This could be extracted into a dismissToast() action,
       // but I'll keep it here for simplicity
       if (toastId) {
         addToRemoveQueue(toastId)
@@ -102,7 +102,7 @@ export const reducer = (state: State, action: Action): State => {
 
       return {
         ...state,
-        toasts: state.toasts.map((t) =>
+        toasts: state.toasts.map((t) => // Map over toasts to set open to false for dismissed toasts
           t.id === toastId || toastId === undefined
             ? {
                 ...t,
@@ -125,7 +125,7 @@ export const reducer = (state: State, action: Action): State => {
       }
   }
 }
-
+  // Manages toast state transitions based on actions
 const listeners: Array<(state: State) => void> = []
 
 let memoryState: State = { toasts: [] }
@@ -136,7 +136,7 @@ function dispatch(action: Action) {
     listener(memoryState)
   })
 }
-
+  // List of listeners for state changes
 type Toast = Omit<ToasterToast, "id">
 
 // Function to create and dispatch a toast notification

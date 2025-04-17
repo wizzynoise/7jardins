@@ -18,6 +18,9 @@ const Contact = () => {
     message: '',
     service: ''
   });
+
+  const [errors, setErrors] = React.useState<{ [key: string]: string }>({});
+
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -29,18 +32,41 @@ const Contact = () => {
   };
   
   const handleSubmit = (e: React.FormEvent) => {
+    let hasErrors = false;
     e.preventDefault();
-    console.log('Formulário submetido com dados:', formData);
-    toast.success('A sua mensagem foi enviada! Entraremos em contacto em breve.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-      service: ''
+    setErrors({}); // Clear previous errors
+
+    // Email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setErrors(prev => ({ ...prev, email: 'Email inválido' }));
+      hasErrors = true;
+    }
+
+    // Phone validation
+    if (formData.phone && !/^[0-9]{9}$/.test(formData.phone)) {
+      setErrors(prev => ({ ...prev, phone: 'Telefone inválido (9 dígitos)' }));
+      hasErrors = true;
+    }
+
+    // Required fields validation
+    const requiredFields = ['name', 'email', 'subject', 'message'];
+    requiredFields.forEach(field => {
+      if (!formData[field]) {
+        setErrors(prev => ({ ...prev, [field]: 'Campo obrigatório' }));
+        hasErrors = true;
+      }
     });
+
+    if (!hasErrors) {
+      console.log('Formulário submetido com dados:', formData);
+      toast.success('A sua mensagem foi enviada! Entraremos em contacto em breve.');
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '', service: '' });
+    } else {
+      toast.error('Por favor, verifique os campos do formulário.');
+    }
   };
+
+
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -94,7 +120,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Telefone</h3>
-                      <p className="text-muted-foreground">912 345 678</p>
+                      <p className="text-muted-foreground">912345678</p>
                     </div>
                   </div>
                   
@@ -159,20 +185,20 @@ const Contact = () => {
                   <h2 className="text-3xl font-serif font-bold mb-6">Envie-nos uma Mensagem</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">O Seu Nome</Label>
+                      <div className="space-y-1">
+                        <Label htmlFor="name">O Seu Nome <span className="text-garden-accent">*</span></Label>
                         <Input
                           id="name"
                           name="name"
                           placeholder="João Silva"
                           value={formData.name}
                           onChange={handleChange}
-                          required
                         />
+                        {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
                       </div>
                       
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Endereço de Email</Label>
+                      <div className="space-y-1">
+                        <Label htmlFor="email">Endereço de Email <span className="text-garden-accent">*</span></Label>
                         <Input
                           id="email"
                           name="email"
@@ -180,14 +206,14 @@ const Contact = () => {
                           placeholder="joao@exemplo.com.pt"
                           required
                           value={formData.email}
-                          onChange={handleChange}
-                          required
+                          onChange={handleChange}                          
                         />
+                        {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
+                      <div className="space-y-1">
                         <Label htmlFor="phone">Número de Telefone</Label>
                         <Input
                           id="phone"
@@ -195,9 +221,9 @@ const Contact = () => {
                           type="tel"
                           pattern="[0-9]{9}"
                           placeholder="912 345 678"
-                          value={formData.phone}
-                          onChange={handleChange}
-                      
+                          value={formData.phone}                          
+                          onChange={handleChange}                          
+                        />                        
                       <div className="space-y-2">
                         <Label htmlFor="service">Interesse em Serviço</Label>
                         <Select onValueChange={handleServiceChange} value={formData.service}>
@@ -212,25 +238,27 @@ const Contact = () => {
                             <SelectItem value="consulting">Consultoria</SelectItem>
                           </SelectContent>
                         </Select>
+                        {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
                       </div>
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Assunto</Label>
+                    <div className="space-y-1">
+                      <Label htmlFor="subject">Assunto <span className="text-garden-accent">*</span></Label>
                       <Input
                         id="subject"
                         name="subject"
                         placeholder="Como podemos ajudar?"
                         value={formData.subject}
                         onChange={handleChange}
-                        required
                       />
+                      {errors.subject && <p className="text-sm text-red-500">{errors.subject}</p>}
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Mensagem</Label>
+                    <div className="space-y-1">
+                      <Label htmlFor="message">Mensagem <span className="text-garden-accent">*</span></Label>
                       <Textarea
                         id="message"
+
                         name="message"
                         placeholder="Conte-nos mais sobre o seu projeto ou dúvida..."
                         rows={5}
@@ -238,6 +266,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                       />
+                      {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
                     </div>
                     
                     <Button type="submit" className="w-full bg-garden-accent hover:bg-garden-accent/90">
