@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -20,7 +21,6 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = React.useState<{ [key: string]: string }>({});
-
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -66,8 +66,6 @@ const Contact = () => {
     }
   };
 
-
-  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -120,7 +118,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Telefone</h3>
-                      <p className="text-muted-foreground">912345678</p>
+                      <p className="text-muted-foreground">Em atualização</p>
                     </div>
                   </div>
                   
@@ -206,7 +204,7 @@ const Contact = () => {
                           placeholder="joao@exemplo.com.pt"
                           required
                           value={formData.email}
-                          onChange={handleChange}                          
+                          onChange={handleChange}
                         />
                         {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
                       </div>
@@ -221,9 +219,12 @@ const Contact = () => {
                           type="tel"
                           pattern="[0-9]{9}"
                           placeholder="912 345 678"
-                          value={formData.phone}                          
-                          onChange={handleChange}                          
-                        />                        
+                          value={formData.phone}
+                          onChange={handleChange}
+                        />
+                        {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
+                      </div>
+                      
                       <div className="space-y-2">
                         <Label htmlFor="service">Interesse em Serviço</Label>
                         <Select onValueChange={handleServiceChange} value={formData.service}>
@@ -234,11 +235,10 @@ const Contact = () => {
                             <SelectItem value="garden-design">Design de Jardins</SelectItem>
                             <SelectItem value="landscaping">Paisagismo</SelectItem>
                             <SelectItem value="maintenance">Manutenção de Jardins</SelectItem>
-                            <SelectItem value="irrigation">Sistemas de Irrigação</SelectItem>
-                            <SelectItem value="consulting">Consultoria</SelectItem>
+                            <SelectItem value="tree-planting">Plantação de Árvores</SelectItem>
+                            <SelectItem value="tree-sales">Venda de Árvores</SelectItem>
                           </SelectContent>
                         </Select>
-                        {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
                       </div>
                     </div>
                     
@@ -258,7 +258,6 @@ const Contact = () => {
                       <Label htmlFor="message">Mensagem <span className="text-garden-accent">*</span></Label>
                       <Textarea
                         id="message"
-
                         name="message"
                         placeholder="Conte-nos mais sobre o seu projeto ou dúvida..."
                         rows={5}
