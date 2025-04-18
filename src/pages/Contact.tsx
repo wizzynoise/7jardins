@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Phone, Mail, MapPin, Clock, Send, Instagram, Facebook, Twitter, Pinterest } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -165,13 +164,13 @@ const Contact = () => {
                       <Twitter />
                     </a>
                     <a
-                      href="https://pinterest.com"
+                      href="https://linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-garden-light hover:bg-garden-medium text-garden-accent p-3 rounded-full transition-colors"
-                      aria-label="Pinterest (Opens in a new tab)"
+                      aria-label="LinkedIn (Opens in a new tab)"
                     >
-                      <Pinterest />
+                      <Linkedin />
                     </a>
                   </div>
                 </div>
