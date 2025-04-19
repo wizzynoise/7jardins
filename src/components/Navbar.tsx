@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +23,7 @@ const Navbar = () => {
     { name: "Início", path: "/" },
     { name: "Sobre", path: "/about" },
     { name: "Serviços", path: "/services" },
+    { name: "Jardins em Destaque", path: "/garden-highlights" },
     { name: "Blog", path: "/blog" },
     { name: "Contacto", path: "/contact" },
   ];
@@ -58,15 +58,14 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button
-            className="bg-garden-accent text-white hover:bg-garden-accent/90"
+          <button
+            className="bg-garden-accent text-white hover:bg-garden-accent/90 px-4 py-2 rounded"
             aria-label="Pedir Orçamento"
-            asChild
           >
             <Link to="/contact">
               Pedir Orçamento
             </Link>
-          </Button>
+          </button>
         </nav>
         
         {/* Mobile Menu Button */}
@@ -96,16 +95,15 @@ const Navbar = () => {
                 {link.name}              
               </Link>
             ))}
-            <Button
-              className="bg-garden-accent text-white hover:bg-garden-accent/90 w-full"
+            <button
+              className="bg-garden-accent text-white hover:bg-garden-accent/90 w-full py-2 rounded"
               onClick={() => setIsOpen(false)}
               aria-label="Pedir Orçamento"
-              asChild
             >
               <Link to="/contact">
                 Pedir Orçamento
               </Link>
-            </Button>
+            </button>
           </div>
         </div>
       )}

@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="font-serif font-bold text-2xl text-white">7Jardins</span>
             </Link>
             <p className="text-white/80 mb-4">
-              Criamos jardins bonitos e sustentáveis que ligam as pessoas à natureza.
+              Uma família apaixonada por jardins, oferecendo serviços e produtos aos melhores preços do mercado.
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-garden-light" aria-label="Instagram (abre numa nova janela)">
@@ -35,15 +35,19 @@ const Footer = () => {
             <ul className="space-y-2" aria-label="Quick Links">
               <li><Link to="/" className="text-white/80 hover:text-white transition-colors" aria-label="Início">Início</Link></li>
               <li><Link to="/services" className="text-white/80 hover:text-white transition-colors" aria-label="Serviços">Serviços</Link></li>
+              <li><Link to="/garden-highlights" className="text-white/80 hover:text-white transition-colors" aria-label="Jardins em Destaque">Jardins em Destaque</Link></li>
+              <li><Link to="/blog" className="text-white/80 hover:text-white transition-colors" aria-label="Blog">Blog</Link></li>
               <li><Link to="/contact" className="text-white/80 hover:text-white transition-colors" aria-label="Contacto">Contacto</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-white font-serif text-xl mb-4">Serviços</h3>
+            <h3 className="text-white font-serif text-xl mb-4">Nossos Serviços</h3>
             <ul className="space-y-2" aria-label="Serviços">
               <li><Link to="/services#maintenance" className="text-white/80 hover:text-white transition-colors" aria-label="Manutenção de Jardins">Manutenção de Jardins</Link></li>
               <li><Link to="/services#planting" className="text-white/80 hover:text-white transition-colors" aria-label="Plantação de Árvores">Plantação de Árvores</Link></li>
+              <li><Link to="/garden-highlights" className="text-white/80 hover:text-white transition-colors" aria-label="Jardins em Destaque">Ideias para Jardins</Link></li>
+              <li><Link to="/contact" className="text-white/80 hover:text-white transition-colors" aria-label="Produtos">Produtos de Jardinagem</Link></li>
             </ul>
           </div>
 
@@ -68,7 +72,7 @@ const Footer = () => {
         
         <div className="border-t border-white/20 pt-6 text-center">
           <p className="text-white/60 text-sm">
-            © {currentYear} 7Jardins. Todos os direitos reservados.
+            © {currentYear} 7Jardins - Negócio Familiar de Jardinagem. Todos os direitos reservados.
           </p>
         </div>
       </div>
