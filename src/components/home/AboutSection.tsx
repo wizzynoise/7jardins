@@ -1,67 +1,36 @@
-
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section className="py-16 bg-garden-light">
+    <section className="py-16 bg-earth-light">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1590856029620-9f1bbfd5248d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80"
-                alt="Profissional de jardinagem a trabalhar" 
-                className="rounded-lg shadow-lg w-full object-cover"
-                style={{ height: "480px" }}
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://images.unsplash.com/photo-1590856029620-9f1bbfd5248d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80";
-                }}
-              />
-              <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-lg shadow-lg hidden lg:block">
-                <p className="font-serif text-3xl text-garden-accent font-bold">30+</p>
-                <p className="text-foreground">Anos de Experiência</p>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <h2 className="text-garden-accent font-medium mb-2">Sobre a 7Jardins</h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-              Apaixonados por Criar Jardins Bonitos
-            </h3>
-            <p className="text-lg mb-6">
-              Na 7Jardins, fundada por Pedro Gomes em 2020 em Rossas, unimos natureza, arte e ciência para criar 
-              espaços verdes bonitos e sustentáveis que inspiram e encantam. Com profissionais com mais de 
-              30 anos de experiência, a nossa equipa é especializada no corte de relva, manutenção 
-              de arbustos e cuidado completo do seu jardim.
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-garden-accent mb-4">
+              Sobre a Nossa Família
+            </h2>
+            <p className="text-muted-foreground text-lg mb-6">
+              Somos uma família dedicada à arte da jardinagem, oferecendo serviços personalizados e produtos de alta qualidade para transformar o seu espaço exterior.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              <div className="flex items-start">
-                <CheckCircle className="text-garden-accent mr-2 shrink-0" />
-                <span>Design de Jardim Profissional</span>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="text-garden-accent mr-2 shrink-0" />
-                <span>Práticas Sustentáveis</span>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="text-garden-accent mr-2 shrink-0" />
-                <span>Equipa Especializada</span>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="text-garden-accent mr-2 shrink-0" />
-                <span>Materiais de Qualidade</span>
-              </div>
-            </div>
-            
+            <p className="text-muted-foreground mb-6">
+              Com anos de experiência, combinamos técnicas tradicionais com as mais recentes inovações para criar jardins deslumbrantes e sustentáveis.
+            </p>
             <Button asChild className="bg-garden-accent hover:bg-garden-accent/90 text-white">
               <Link to="/about">Saiba Mais Sobre Nós</Link>
             </Button>
+          </div>
+          
+          <div className="md:block">
+            <img 
+              src="https://images.unsplash.com/photo-1591741389395-0c393c77afca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
+              alt="Equipe de jardinagem" 
+              className="rounded-lg shadow-xl"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.backgroundColor = '#A5D6A7';
+              }}
+            />
           </div>
         </div>
       </div>

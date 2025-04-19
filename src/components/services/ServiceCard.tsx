@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { CheckCircle, LucideIcon } from 'lucide-react';
+import { Button } from "../ui/button";
+import { CheckCircle } from 'lucide-react';
 
 interface ServiceCardProps {
   id: string;

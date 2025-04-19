@@ -1,4 +1,3 @@
-import React from 'react';
 import { Leaf, Trees } from 'lucide-react';
 
 export const services = [

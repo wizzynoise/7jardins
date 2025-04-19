@@ -1,7 +1,5 @@
-
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Trees, Leaf, Scissors } from 'lucide-react';
+import { Leaf, Trees, Scissors } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
