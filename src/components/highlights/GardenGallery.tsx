@@ -1,6 +1,3 @@
-
-import React from 'react';
-
 const gardenImages = [
   {
     url: "https://images.unsplash.com/photo-1558293842-c0fd3db86157?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",

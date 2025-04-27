@@ -1,7 +1,8 @@
+
 import { Link } from 'react-router-dom';
 import { Leaf, Trees, Scissors } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 
 const services = [
   {
